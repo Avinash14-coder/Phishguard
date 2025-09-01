@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>PhishGuard - Pricing</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        html { font-family: 'Inter', sans-serif; }
+        body { font-family: 'Inter', sans-serif; font-weight: 500; letter-spacing: -0.01em; }
+        .card { box-shadow: 0 2px 8px 0 rgba(0,0,0,0.04); border-radius: 1rem; border: 1px solid #27272a; background: #18181b; }
+        .shadcn-btn { font-family: 'Inter', sans-serif; font-weight: 500; border-radius: 0.5rem; padding: 0.5rem 1.25rem; transition: background 0.15s, color 0.15s, border 0.15s; }
+        .shadcn-btn-primary { background: #27272a; color: #f4f4f5; border: 1px solid #27272a; }
+        .shadcn-btn-primary:hover { background: #3f3f46; }
+        
+        /* Smooth scrolling */
+        html {
+            scroll-behavior: smooth;
+            scroll-padding-top: 80px;
+        }
+
+        /* Custom scrollbar */
+        ::-webkit-scrollbar {
+            width: 10px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #18181b;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #27272a;
+            border-radius: 5px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #3f3f46;
+        }
+
+        /* Popular badge animation */
+        .popular-badge {
+            animation: pulse 2s infinite;
+        }
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.7; }
+        }
+    </style>
+</head>
+<body class="bg-[#09090b] min-h-screen text-[#f4f4f5]">
+    <!-- Fixed Navbar -->
+    <nav class="fixed top-0 left-0 w-full bg-[#18181b]/95 border-b border-[#27272a] backdrop-blur z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16 items-center">
+                <a href="index.html" class="flex items-center">
+                    <span class="text-2xl font-bold text-[#f4f4f5]">PhishGuard</span>
+                </a>
+                <div class="hidden md:flex space-x-6 items-center">
+                    <a href="index.html" class="text-[#a1a1aa] hover:text-[#f4f4f5] transition-colors">Home</a>
+                    <a href="about.html" class="text-[#a1a1aa] hover:text-[#f4f4f5] transition-colors">About</a>
+                    <a href="developer.html" class="text-[#a1a1aa] hover:text-[#f4f4f5] transition-colors">Developer Portal</a>
+                    <a href="contact.html" class="text-[#a1a1aa] hover:text-[#f4f4f5] transition-colors">Contact</a>
+                    <a href="pricing.html" class="text-[#f4f4f5] border-b-2 border-[#f4f4f5]">Pricing</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="pt-24 pb-12">
+        <!-- Hero Section -->
+        <section class="max-w-4xl mx-auto px-4 text-center mb-16">
+            <h1 class="text-4xl font-bold mb-4">Simple, Transparent Pricing</h1>
+            <p class="text-[#a1a1aa] text-lg">Choose the perfect plan for your security needs</p>
+        </section>
+
+        <!-- Pricing Grid -->
+        <section class="max-w-6xl mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Free Plan -->
+                <div class="card p-6 flex flex-col">
+                    <div class="mb-8">
+                        <h3 class="text-xl font-semibold mb-4">Free</h3>
+                        <div class="flex items-baseline mb-4">
+                            <span class="text-4xl font-bold">₹0</span>
+                            <span class="text-[#a1a1aa] ml-2">/month</span>
+                        </div>
+                        <p class="text-[#a1a1aa]">Perfect for individual users</p>
+                    </div>
+                    <ul class="space-y-4 mb-8 flex-grow">
+                        <li class="flex items-center">
+                            <svg class="w-5 h-5 text-emerald-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            50 URL scans/month
+                        </li>
+                        <li class="flex items-center">
+                            <svg class="w-5 h-5 text-emerald-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            Basic Email/SMS scanning
+                        </li>
+                        <li class="flex items-center">
+                            <svg class="w-5 h-5 text-emerald-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            QR code scanning
+                        </li>
+                    </ul>
+                    <button class="shadcn-btn shadcn-btn-primary w-full">Get Started</button>
+                </div>
+
+                <!-- Pro Plan -->
+                <div class="card p-6 flex flex-col relative border-blue-500">
+                    <div class="popular-badge absolute -top-3 right-4 bg-blue-500 text-white px-3 py-1 rounded-full text-sm">
+                        Popular
+                    </div>
+                    <div class="mb-8">
+                        <h3 class="text-xl font-semibold mb-4">Pro</h3>
+                        <div class="flex items-baseline mb-4">
+                            <span class="text-4xl font-bold">₹199</span>
+                            <span class="text-[#a1a1aa] ml-2">/month</span>
+                        </div>
+                        <p class="text-[#a1a1aa]">For professional users</p>
+                    </div>
+                    <ul class="space-y-4 mb-8 flex-grow">
+                        <li class="flex items-center">
+                            <svg class="w-5 h-5 text-emerald-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            Unlimited URL scans
+                        </li>
+                        <li class="flex items-center">
+                            <svg class="w-5 h-5 text-emerald-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            Advanced threat detection
+                        </li>
+                        <li class="flex items-center">
+                            <svg class="w-5 h-5 text-emerald-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            File malware scanning
+                        </li>
+                        <li class="flex items-center">
+                            <svg class="w-5 h-5 text-emerald-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            Priority support
+                        </li>
+                    </ul>
+                    <button class="shadcn-btn shadcn-btn-primary w-full bg-blue-500 border-blue-500 hover:bg-blue-600">
+                        Start Pro Trial
+                    </button>
+                </div>
+
+                <!-- Enterprise Plan -->
+                <div class="card p-6 flex flex-col">
+                    <div class="mb-8">
+                        <h3 class="text-xl font-semibold mb-4">Enterprise</h3>
+                        <div class="flex items-baseline mb-4">
+                            <span class="text-4xl font-bold">Custom</span>
+                        </div>
+                        <p class="text-[#a1a1aa]">For large organizations</p>
+                    </div>
+                    <ul class="space-y-4 mb-8 flex-grow">
+                        <li class="flex items-center">
+                            <svg class="w-5 h-5 text-emerald-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            Custom API limits
+                        </li>
+                        <li class="flex items-center">
+                            <svg class="w-5 h-5 text-emerald-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            Dedicated support
+                        </li>
+                        <li class="flex items-center">
+                            <svg class="w-5 h-5 text-emerald-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            Custom integration
+                        </li>
+                        <li class="flex items-center">
+                            <svg class="w-5 h-5 text-emerald-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            SLA guarantee
+                        </li>
+                    </ul>
+                    <button class="shadcn-btn shadcn-btn-primary w-full">Contact Sales</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section class="max-w-4xl mx-auto px-4 mt-24">
+            <h2 class="text-2xl font-bold text-center mb-12">Frequently Asked Questions</h2>
+            <div class="space-y-6">
+                <div class="card p-6">
+                    <h3 class="text-lg font-semibold mb-2">Can I upgrade or downgrade my plan?</h3>
+                    <p class="text-[#a1a1aa]">Yes, you can change your plan at any time. Changes will be reflected in your next billing cycle.</p>
+                </div>
+                <div class="card p-6">
+                    <h3 class="text-lg font-semibold mb-2">Do you offer refunds?</h3>
+                    <p class="text-[#a1a1aa]">Yes, we offer a 30-day money-back guarantee for all paid plans.</p>
+                </div>
+                <div class="card p-6">
+                    <h3 class="text-lg font-semibold mb-2">What payment methods do you accept?</h3>
+                    <p class="text-[#a1a1aa]">We accept all major credit cards, PayPal, and wire transfers for Enterprise plans.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="w-full text-center py-6 bg-[#18181b] border-t border-[#27272a] mt-12 text-[#a1a1aa] text-sm">
+        © 2025 PhishGuard. All rights reserved.
+    </footer>
+</body>
+</html>

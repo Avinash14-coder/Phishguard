@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>PhishGuard - Developer Portal</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    /* Reuse existing styles */
+    html { font-family: 'Inter', sans-serif; }
+    body { font-family: 'Inter', sans-serif; font-weight: 500; letter-spacing: -0.01em; }
+    .card { box-shadow: 0 2px 8px 0 rgba(0,0,0,0.04); border-radius: 1rem; border: 1px solid #27272a; background: #18181b; }
+    .shadcn-btn { font-family: 'Inter', sans-serif; font-weight: 500; border-radius: 0.5rem; padding: 0.5rem 1.25rem; transition: background 0.15s, color 0.15s, border 0.15s; }
+    .shadcn-btn-primary { background: #27272a; color: #f4f4f5; border: 1px solid #27272a; }
+    .shadcn-input { background: #232326; color: #f4f4f5; border: 1px solid #27272a; border-radius: 0.5rem; padding: 0.5rem 1rem; }
+    
+    /* Code block styling */
+    .code-block {
+      background: #232326;
+      border-radius: 0.5rem;
+      padding: 1rem;
+      font-family: monospace;
+      overflow-x: auto;
+    }
+
+  /* ...existing styles... */
+
+        /* Add smooth scrolling behavior */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Custom scrollbar styling */
+        ::-webkit-scrollbar {
+            width: 10px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: #18181b;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: #27272a;
+            border-radius: 5px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: #3f3f46;
+        }
+
+        /* Optional: Add offset for fixed header */
+        html {
+            scroll-padding-top: 80px; /* Adjust based on your navbar height */
+        }
+
+  </style>
+</head>
+<body class="bg-[#09090b] min-h-screen text-[#f4f4f5]">
+  <!-- Same Navbar -->
+  <nav class="fixed top-0 left-0 w-full bg-[#18181b]/95 border-b border-[#27272a] backdrop-blur z-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex justify-between h-16 items-center">
+        <a href="index.html" class="flex items-center">
+          <span class="text-2xl font-bold text-[#f4f4f5]">Developer Portal</span>
+        </a>
+        <div class="hidden md:flex space-x-6 items-center">
+          <a href="index.html" class="text-[#a1a1aa] hover:text-[#f4f4f5] transition-colors">Home</a>
+          <a href="developer.html" class="text-[#f4f4f5] border-b-2 border-[#f4f4f5]">Developer Portal</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Main Content -->
+  <main class="pt-24 pb-12 max-w-4xl mx-auto px-4">
+    <!-- API Key Section -->
+    <section class="mb-12">
+      <div class="card p-6">
+        <h2 class="text-xl font-semibold mb-4">API Access</h2>
+        <div id="login-section">
+          <form id="login-form" class="space-y-4">
+            <input type="email" id="email" placeholder="Email" required class="shadcn-input w-full"/>
+            <input type="password" id="password" placeholder="Password" required class="shadcn-input w-full"/>
+            <button type="submit" class="shadcn-btn shadcn-btn-primary w-full">Login</button>
+          </form>
+          <p class="mt-4 text-[#a1a1aa] text-sm">Don't have an account? 
+            <button onclick="showRegister()" class="text-[#f4f4f5] underline">Register</button>
+          </p>
+        </div>
+        
+        <div id="register-section" class="hidden">
+          <form id="register-form" class="space-y-4">
+            <input type="email" id="reg-email" placeholder="Email" required class="shadcn-input w-full"/>
+            <input type="password" id="reg-password" placeholder="Password" required class="shadcn-input w-full"/>
+            <button type="submit" class="shadcn-btn shadcn-btn-primary w-full">Register</button>
+          </form>
+          <p class="mt-4 text-[#a1a1aa] text-sm">Already have an account? 
+            <button onclick="showLogin()" class="text-[#f4f4f5] underline">Login</button>
+          </p>
+        </div>
+
+        <div id="api-key-section" class="hidden">
+          <p class="text-[#a1a1aa] mb-2">Your API Key:</p>
+          <div class="flex gap-2">
+            <input type="text" id="api-key" readonly class="shadcn-input flex-1" />
+            <button onclick="copyApiKey()" class="shadcn-btn shadcn-btn-primary">Copy</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- API Documentation -->
+    <section class="space-y-8">
+      <h2 class="text-2xl font-bold">API Documentation</h2>
+
+      <!-- URL Scanner API -->
+      <div class="card p-6">
+        <h3 class="text-lg font-semibold mb-4">URL Scanner API</h3>
+        <p class="text-[#a1a1aa] mb-4">Check if a URL is potentially malicious.</p>
+        
+        <div class="code-block mb-4">
+          <pre><code>POST /predict/url
+Headers: {
+  "x-api-key": "your-api-key"
+}
+Body: {
+  "url": "https://example.com"
+}</code></pre>
+        </div>
+
+        <p class="text-sm text-[#a1a1aa] mb-2">Response:</p>
+        <div class="code-block">
+          <pre><code>{
+  "phishing": true|false
+}</code></pre>
+        </div>
+      </div>
+
+      <!-- Email/SMS Scanner API -->
+      <div class="card p-6">
+        <h3 class="text-lg font-semibold mb-4">Email/SMS Scanner API</h3>
+        <p class="text-[#a1a1aa] mb-4">Analyze messages for phishing attempts.</p>
+        
+        <div class="code-block mb-4">
+          <pre><code>POST /predict/email_sms
+Headers: {
+  "x-api-key": "your-api-key"
+}
+Body: {
+  "message": "Your message content"
+}</code></pre>
+        </div>
+
+        <p class="text-sm text-[#a1a1aa] mb-2">Response:</p>
+        <div class="code-block">
+          <pre><code>{
+  "phishing": true|false
+}</code></pre>
+        </div>
+      </div>
+
+      <!-- File Scanner API -->
+      <div class="card p-6">
+        <h3 class="text-lg font-semibold mb-4">File Scanner API</h3>
+        <p class="text-[#a1a1aa] mb-4">Check files for potential malware.</p>
+        
+        <div class="code-block mb-4">
+          <pre><code>POST /predict/file
+Headers: {
+  "x-api-key": "your-api-key"
+}
+Body: {
+  "file_size": number,
+  "file_type": number,
+  "entropy": float,
+  "strings_count": number,
+  "suspicious_strings": number
+}</code></pre>
+        </div>
+
+        <p class="text-sm text-[#a1a1aa] mb-2">Response:</p>
+        <div class="code-block">
+          <pre><code>{
+  "malicious": true|false
+}</code></pre>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="w-full text-center py-6 bg-[#18181b] border-t border-[#27272a] mt-12 text-[#a1a1aa] text-sm">
+    © 2025 PhishGuard. All rights reserved.
+  </footer>
+
+  <script>
+    function showRegister() {
+      document.getElementById('login-section').classList.add('hidden');
+      document.getElementById('register-section').classList.remove('hidden');
+    }
+
+    function showLogin() {
+      document.getElementById('register-section').classList.add('hidden');
+      document.getElementById('login-section').classList.remove('hidden');
+    }
+
+    async function copyApiKey() {
+      const apiKey = document.getElementById('api-key').value;
+      await navigator.clipboard.writeText(apiKey);
+      alert('API key copied to clipboard!');
+    }
+
+    // Handle Login
+    document.getElementById('login-form').onsubmit = async function(e) {
+      e.preventDefault();
+      const email = document.getElementById('email').value;
+      const password = document.getElementById('password').value;
+
+      try {
+        const response = await fetch('http://127.0.0.1:8000/login', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ email, password })
+        });
+
+        const data = await response.json();
+        if (response.ok) {
+          document.getElementById('login-section').classList.add('hidden');
+          document.getElementById('api-key-section').classList.remove('hidden');
+          document.getElementById('api-key').value = data.api_key;
+        } else {
+          alert('Login failed: ' + data.detail);
+        }
+      } catch (error) {
+        alert('Error: ' + error.message);
+      }
+    };
+
+    // Handle Registration
+    document.getElementById('register-form').onsubmit = async function(e) {
+      e.preventDefault();
+      const email = document.getElementById('reg-email').value;
+      const password = document.getElementById('reg-password').value;
+
+      try {
+        const response = await fetch('http://127.0.0.1:8000/register', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ email, password })
+        });
+
+        const data = await response.json();
+        if (response.ok) {
+          document.getElementById('register-section').classList.add('hidden');
+          document.getElementById('api-key-section').classList.remove('hidden');
+          document.getElementById('api-key').value = data.api_key;
+        } else {
+          alert('Registration failed: ' + data.detail);
+        }
+      } catch (error) {
+        alert('Error: ' + error.message);
+      }
+    };
+  </script>
+</body>
+</html>

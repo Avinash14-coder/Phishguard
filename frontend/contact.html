@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>PhishGuard - Contact Us</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        html { font-family: 'Inter', sans-serif; }
+        body { font-family: 'Inter', sans-serif; font-weight: 500; letter-spacing: -0.01em; }
+        .card { box-shadow: 0 2px 8px 0 rgba(0,0,0,0.04); border-radius: 1rem; border: 1px solid #27272a; background: #18181b; }
+        .shadcn-btn { font-family: 'Inter', sans-serif; font-weight: 500; border-radius: 0.5rem; padding: 0.5rem 1.25rem; transition: background 0.15s, color 0.15s, border 0.15s; }
+        .shadcn-btn-primary { background: #27272a; color: #f4f4f5; border: 1px solid #27272a; }
+        .shadcn-btn-primary:hover { background: #3f3f46; }
+        .shadcn-input { background: #232326; color: #f4f4f5; border: 1px solid #27272a; border-radius: 0.5rem; padding: 0.5rem 1rem; font-family: 'Inter', sans-serif; font-weight: 500; }
+        .shadcn-input:focus { outline: none; border-color: #3b82f6; box-shadow: 0 0 0 2px #3b82f6; }
+
+        /* Add smooth scrolling to the whole page */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Optional: Add custom scrollbar */
+        ::-webkit-scrollbar {
+            width: 10px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: #18181b;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: #27272a;
+            border-radius: 5px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: #3f3f46;
+        }
+    </style>
+</head>
+<body class="bg-[#09090b] min-h-screen text-[#f4f4f5]">
+    <!-- Fixed Navbar -->
+    <nav class="fixed top-0 left-0 w-full bg-[#18181b]/95 border-b border-[#27272a] backdrop-blur z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16 items-center">
+                <a href="index.html" class="flex items-center">
+                    <span class="text-2xl font-bold text-[#f4f4f5]">Contact</span>
+                </a>
+                <div class="hidden md:flex space-x-6 items-center">
+                    <a href="index.html" class="text-[#a1a1aa] hover:text-[#f4f4f5] transition-colors">Home</a>
+                    <a href="about.html" class="text-[#a1a1aa] hover:text-[#f4f4f5] transition-colors">About</a>
+                    <a href="developer.html" class="text-[#a1a1aa] hover:text-[#f4f4f5] transition-colors">Developer Portal</a>
+                    <a href="contact.html" class="text-[#f4f4f5] border-b-2 border-[#f4f4f5]">Contact</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="pt-24 pb-12">
+        <!-- Hero Section -->
+        <section class="max-w-4xl mx-auto px-4 text-center mb-16">
+            <h1 class="text-4xl font-bold mb-6">Get in Touch with Us!</h1>
+            <p class="text-[#a1a1aa] text-lg mb-8">
+                Have questions, feedback, or want to collaborate?<br>
+                We'd love to hear from you.
+            </p>
+        </section>
+
+        <div class="max-w-4xl mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+                <!-- Contact Information -->
+                <div>
+                    <h2 class="text-2xl font-bold mb-6">Contact Information</h2>
+                    <div class="card p-6 space-y-6">
+                        <div class="flex items-start">
+                            <svg class="w-6 h-6 text-[#f4f4f5] mr-3" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75" />
+                            </svg>
+                            <div>
+                                <h3 class="font-semibold mb-1">Email</h3>
+                                <p class="text-[#a1a1aa]">phishguard.project@gmail.com</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <svg class="w-6 h-6 text-[#f4f4f5] mr-3" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z" />
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z" />
+                            </svg>
+                            <div>
+                                <h3 class="font-semibold mb-1">Location</h3>
+                                <p class="text-[#a1a1aa]">Government Polytechnic Nashik, Maharashtra, India</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Contact Form -->
+                <div>
+                    <h2 class="text-2xl font-bold mb-6">Send us a Message</h2>
+                    <form id="contact-form" class="card p-6 space-y-4">
+                        <div>
+                            <label for="name" class="block text-sm font-medium mb-2">Name</label>
+                            <input type="text" id="name" name="name" required class="shadcn-input w-full" placeholder="Your name">
+                        </div>
+                        <div>
+                            <label for="email" class="block text-sm font-medium mb-2">Email</label>
+                            <input type="email" id="email" name="email" required class="shadcn-input w-full" placeholder="your@email.com">
+                        </div>
+                        <div>
+                            <label for="message" class="block text-sm font-medium mb-2">Message</label>
+                            <textarea id="message" name="message" required class="shadcn-input w-full h-32 resize-none" placeholder="Your message"></textarea>
+                        </div>
+                        <button type="submit" class="shadcn-btn shadcn-btn-primary w-full">Send Message</button>
+                    </form>
+                </div>
+            </div>
+
+            <!-- Success Message (hidden by default) -->
+            <div id="success-message" class="hidden mt-8 text-center">
+                <div class="card p-6 inline-block">
+                    <p class="text-lg font-medium">✅ Thanks for contacting PhishGuard! We'll get back to you soon.</p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="w-full text-center py-6 bg-[#18181b] border-t border-[#27272a] mt-12 text-[#a1a1aa] text-sm">
+        © 2025 PhishGuard. All rights reserved.
+    </footer>
+
+    <script>
+        document.getElementById('contact-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            // Hide the form
+            this.style.display = 'none';
+            // Show success message
+            document.getElementById('success-message').classList.remove('hidden');
+            // Optional: Reset form
+            this.reset();
+        });
+    </script>
+</body>
+</html>

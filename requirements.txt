@@ -1,0 +1,12 @@
+# Database
+sqlite3
+
+# Security
+hashlib
+secrets
+
+# API
+fastapi>=0.68.0
+uvicorn>=0.15.0
+pydantic>=1.8.0
+python-multipart>=0.0.5 
