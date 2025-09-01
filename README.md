@@ -38,4 +38,18 @@ The project not only demonstrates the application of data science in security bu
 
 ---
 
-## 📂 Project Structure  
+## 🖼️ Screenshots
+
+### Dashboard View
+![Screenshot 1](Images/Screenshot%202025-09-01%20192816.png)
+
+### Phishing Detection Result
+![Screenshot 2](Images/Screenshot%202025-09-01%20192835.png)
+
+### File Scan Example
+![Screenshot 3](Images/Screenshot%202025-09-01%20192906.png)
+
+### URL Scan Example
+![Screenshot 4](Images/Screenshot%202025-09-01%20193007.png)
+
+
