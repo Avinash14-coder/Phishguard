@@ -1,4 +1,7 @@
-// Tab Switching Logic
+// API base URL - change if backend runs on a different host/port
+        const API_BASE = "http://127.0.0.1:8001";
+
+        // Tab Switching Logic
         function switchTab(tabId) {
             // Hide all tab contents
             document.querySelectorAll('.tab-content').forEach(tab => tab.classList.add('hidden'));
@@ -36,7 +39,7 @@
             document.getElementById("url-result-icon").innerHTML = "";
 
             try {
-                const res = await fetch("http://127.0.0.1:8000/predict/url", {
+                const res = await fetch(`${API_BASE}/predict/url`, {
                     method: "POST",
                     headers: { "Content-Type": "application/json" },
                     body: JSON.stringify({ url })
@@ -76,7 +79,7 @@
             document.getElementById("email-result-icon").innerHTML = "";
 
             try {
-                const res = await fetch("http://127.0.0.1:8000/predict/email_sms", {
+                const res = await fetch(`${API_BASE}/predict/email_sms`, {
                     method: "POST",
                     headers: { "Content-Type": "application/json" },
                     body: JSON.stringify({ message })
@@ -135,7 +138,7 @@
                             suspicious_strings
                         };
 
-                        const res = await fetch("http://127.0.0.1:8000/predict/file", {
+                        const res = await fetch(`${API_BASE}/predict/file`, {
                             method: "POST",
                             headers: { "Content-Type": "application/json" },
                             body: JSON.stringify(data)
@@ -231,7 +234,7 @@
             document.getElementById("qr-result-icon").innerHTML = "";
 
             try {
-                const res = await fetch("http://127.0.0.1:8000/predict/url", {
+                const res = await fetch(`${API_BASE}/predict/url`, {
                     method: "POST",
                     headers: { "Content-Type": "application/json" },
                     body: JSON.stringify({ url: decodedText })
