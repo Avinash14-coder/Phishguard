@@ -1,5 +1,5 @@
 // API base URL - change if backend runs on a different host/port
-        const API_BASE = "http://127.0.0.1:8001";
+        const API_BASE = "https://phishguard-krr2.onrender.com";
 
         // Tab Switching Logic
         function switchTab(tabId) {
