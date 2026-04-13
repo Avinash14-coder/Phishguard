@@ -1,8 +1,6 @@
 # Database
 
 # Security
-hashlib
-secrets
 
 # API
 fastapi>=0.68.0
@@ -10,6 +8,6 @@ uvicorn>=0.15.0
 pydantic>=1.8.0
 joblib
 scikit-learn
-python-multipart>=0.0.5 
-
-
+python-multipart>=0.0.5
+pandas
+email-validator
